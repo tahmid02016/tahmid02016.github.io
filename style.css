@@ -1,0 +1,128 @@
+/*stylesheet for tahmid02016.github.io*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: blue;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: red;
+}
+a:active {
+  color: white;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+header {
+  padding: 50px 0px;
+  background-color: black;
+}
+
+hr {
+  height: 2px;
+  color: white;
+}
+
+p {
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: darkgrey;
+  background-color: white;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 40px;
+}
+
+h3 {
+  margin: 10px;
+}
+
+h4 {
+  margin: 10px;
+}
+
+footer {
+  padding: 25px 10px;
+  width: 100%;
+  background-color: darkgrey;
+  color: white;
+  text-align: center;
+  border-top: 2px solid white;
+}
+
+ul {
+  list-style-type: square;
+} 
+
+.skills-container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.skills-box {
+  width: 50%;
+  padding-left: 10px;
+  float: left;
+  border-right: 2px solid white;
+}
+
+nav {
+  width: 100%;
+  height: 40px;
+  color: white;
+  background-color: darkgrey;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+}
+
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.headnav {
+  width: 33.33%;
+  float: left;
+  overflow: auto;
+  text-align: center;
+  line-height: 40px;
+  border-right: 1px solid black;
+}
+
+#banner {
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  font-style: italic;
+}
+
+
