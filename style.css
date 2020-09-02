@@ -1,18 +1,30 @@
-/*stylesheet for tahmid02016.github.io*/
+/* stylesheet for tahmid02016.github.io*/
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0px;
-  padding: 0px;
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #DCDCDC;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 a {
   text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
 }
-
 a:link {
   color: blue;
 }
@@ -26,103 +38,87 @@ a:active {
   color: white;
 }
 
-body {
-  background-color: lightgrey;
-}
-
 header {
-  padding: 50px 0px;
-  background-color: black;
-}
-
-hr {
-  height: 2px;
-  color: white;
-}
-
-p {
-  margin: 10px;
-}
-
-h1 {
+  background-color: lime;
+  color: grey;
+  font-family: 'Ultra', serif;
+  font-size: 30px;
   text-align: center;
-  color: darkgrey;
-  background-color: white;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  height: 40px;
   width: 100%;
-  line-height: 40px;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 40px;
-}
-
-h3 {
-  margin: 10px;
-}
-
-h4 {
-  margin: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 10px double white;
 }
 
 footer {
-  padding: 25px 10px;
   width: 100%;
-  background-color: darkgrey;
+  background-color: black;
   color: white;
+  padding: 5px;
   text-align: center;
-  border-top: 2px solid white;
 }
 
-ul {
-  list-style-type: square;
-} 
+h1, h3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Serif Text', serif;
+}
 
-.skills-container::after {
-  content: "";
-  display: block;
-  clear: both;
+section {
+  margin: 20px auto;
+  width: 90%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  width: 100%;
+  background-color: lime;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.section-content {
+  width: 100%;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 10px;
 }
 
 .skills-box {
+  float: left;
   width: 50%;
-  padding-left: 10px;
-  float: left;
-  border-right: 2px solid white;
+  padding: 0;
+  margin: 0;
 }
 
-nav {
-  width: 100%;
-  height: 40px;
-  color: white;
-  background-color: darkgrey;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0px;
+#img-container {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  background-color: white;
 }
 
-nav::after {
-  content: "";
-  display: block;
-  clear: both;
+.img-box {
+  margin: 30px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.headnav {
-  width: 33.33%;
-  float: left;
-  overflow: auto;
-  text-align: center;
-  line-height: 40px;
-  border-right: 1px solid black;
+.img-caption {
+  background-color: lime;
+  padding: 10px;
+  margin: 0;
 }
 
-#banner {
-  text-align: center;
-  color: white;
-  background-color: black;
-  font-size: 20px;
-  font-style: italic;
+@media (max-width: 700px) {
+  #achievements {
+    width: 100%;
+  }
 }
-
 
