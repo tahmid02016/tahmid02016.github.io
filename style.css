@@ -95,6 +95,18 @@ section {
   margin: 0;
 }
 
+#blog-file-link {
+  width: 90%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: lime;
+  padding: 30px;
+}
+
+#blog-file-link {
+  color: lime;
+}
 #img-container {
   display: flex;
   flex-direction: row; 
