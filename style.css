@@ -12,7 +12,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #DCDCDC;
   font-size: 16px;
 }
 
@@ -97,16 +96,21 @@ section {
 
 #blog-file-link {
   width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
   font-size: 30px;
-  font-weight: bold;
   text-align: center;
   color: lime;
   padding: 30px;
+  border: 5px solid lime;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-#blog-file-link {
+#blog-file-link a {
   color: lime;
+  font-family: 'Ultra', serif;
 }
+
 #img-container {
   display: flex;
   flex-direction: row; 
@@ -133,4 +137,3 @@ section {
     width: 100%;
   }
 }
-
