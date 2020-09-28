@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-size: 20px;
+}
+
+#banner {
+  background-color: lime;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 30px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  position: fixed;
+  top: 0;
+}
+
+#banner a {
+  color: white;
+}
+ 
+#blog-link {
+  background-color: white;
+  font-size: 30px;
+  font-weight: bold;
+  width: 80%;
+  padding: 30px 0;
+  margin: 30px auto;
+  margin-top: 90px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#blog-link a {
+  color: lime;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  padding: 20px;
+}
+p {
+  margin: 10px 20px;
+}
+
+#my-speech {
+  color: lime;
+  background-color: #696969;
+}
+
+#my-speech p {
+  margin: 0;
+  padding: 20px;
+}
+ 
