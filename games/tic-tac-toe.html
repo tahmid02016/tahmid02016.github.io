@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Tic Tac Toe game">
+  <meta name="keyword" content="tic tac toe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title> Tic Tac Toe </title>
+  <style>
+  * { box-align: border-box; overflow: auto; }
+  html { margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; border: 15px double lime; }
+  #banner { width: 80%; height: 60px; line-height: 60px; text-align: center; font-size: 40px; font-weight: bold; margin: 0 auto; margin-top: 30px; background-color: lime; color: white; }
+  #result-board { width: 80%; vheight: 50px; line-height: 50px; text-align: center; font-size: 30px; font-weight: bold; margin: 10px auto; background-color: lime; color: white; }
+  table { width: 80%; margin: 0 auto; border: 5px solid lime; border-collapse: collapse; }
+  td { width: 20vw; height: 20vw; border: 5px solid lime; text-align: center; verticle-align: center; font-size: 30px; font-weight: bold; color: lime; }
+  #restart { width: 80%; height: 50px; line-height: 50px; text-align: center; font-size: 30px; font-weight: bold; margin: 10px auto; background-color: lime; color: white; }
+  </style>
+</head>
+
+<body>
+  <div id="banner">Tic Tac Toe</div>
+  <div id="result-board"></div>
+  <table>
+    <tr><td id="AA" onclick="playTurn(0)"></td><td id="AB" onclick="playTurn(1)"></td><td id="AC" onclick="playTurn(2)"></td></tr>
+    <tr><td id="BA" onclick="playTurn(3)"></td><td id="BB" onclick="playTurn(4)"></td><td id="BC" onclick="playTurn(5)"></td></tr>
+    <tr><td id="CA" onclick="playTurn(6)"></td><td id="CB" onclick="playTurn(7)"></td><td id="CC" onclick="playTurn(8)"></td></tr>
+  </table>
+  <div id="restart" onclick="restartGame()"> Restart Game </button>
+  <script>
+  var board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
+  var player = "X";
+  function printBoard() {
+    document.getElementById("result-board").innerHTML = `Player - ${player}`;
+    document.getElementById("AA"). innerHTML = board[0];
+    document.getElementById("AB"). innerHTML = board[1];
+    document.getElementById("AC"). innerHTML = board[2];
+    document.getElementById("BA"). innerHTML = board[3];
+    document.getElementById("BB"). innerHTML = board[4];
+    document.getElementById("BC"). innerHTML = board[5];
+    document.getElementById("CA"). innerHTML = board[6];
+    document.getElementById("CB"). innerHTML = board[7];
+    document.getElementById("CC"). innerHTML = board[8];
+  }
+  function playTurn(n) {
+    board[n] = player;
+    if (isWinner()) {
+        printBoard();
+        document.getElementById("result-board").innerHTML = `Player ${player} Won!`;
+        disableClick();
+    } else if(isDraw()) {
+        printBoard();
+        document.getElementById("result-board"). innerHTML = `Match Draw!`;
+    } else {
+        player = player === "X" ? "O" : "X";
+        printBoard();
+    }
+  }
+  function isDraw() {
+    return !board.includes(" ");
+  }
+  function isWinner() {
+    winState = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+    for (let p of winState) {
+        if (board[p[0]] !== " " && board[p[0]] === board[p[1]] && board[p[1]] === board[p[2]]) {
+            return true;
+        }
+    }
+    return false;
+  }
+  function restartGame() {
+    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
+    player = "X";
+    printBoard();
+  }
+  </script>
+  <script>
+    printBoard();
+  </script>
+</body>
+</html>
