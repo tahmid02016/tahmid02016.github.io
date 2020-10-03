@@ -12,7 +12,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
 }
 
 img {
@@ -21,27 +20,15 @@ img {
 }
 
 a {
-  text-decoration: none;
-  font-family: 'Roboto Mono', monospace;
-}
-a:link {
-  color: blue;
-}
-a:visited {
-  color: green;
-}
-a:hover {
-  color: red;
-}
-a:active {
-  color: white;
+  text-decoration: underline lime;
+  color: inherit;
 }
 
 header {
   background-color: lime;
-  color: grey;
-  font-family: 'Ultra', serif;
+  color: white;
   font-size: 30px;
+  font-weight: bold;
   text-align: center;
   width: 100%;
   margin: 0 auto;
@@ -60,7 +47,6 @@ footer {
 h1, h3 {
   margin: 0;
   padding: 0;
-  font-family: 'DM Serif Text', serif;
 }
 
 section {
@@ -94,21 +80,17 @@ section {
   margin: 0;
 }
 
-#blog-file-link {
+.box {
   width: 90%;
   margin: 0 auto;
   margin-top: 30px;
   font-size: 30px;
+  font-weight: bold;
   text-align: center;
   color: lime;
   padding: 30px;
   border: 5px solid lime;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-}
-
-#blog-file-link a {
-  color: lime;
-  font-family: 'Ultra', serif;
 }
 
 #img-container {
@@ -122,6 +104,7 @@ section {
 }
 
 .img-box {
+  width: 30%;
   margin: 30px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -132,8 +115,11 @@ section {
   margin: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   #achievements {
+    width: 100%;
+  }
+  .img-box {
     width: 100%;
   }
 }
