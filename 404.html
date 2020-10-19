@@ -1,0 +1,105 @@
+<!DOCYYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title> 404 Not Found </title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: #1f3d5d; }
+    button { width: 40%; margin: 5px; padding: 5px; background-color: lime; color: white; border: none; outline; none; box-shadow: 0 5px 0 lightgrey; border-radius: 10px; font-size: 30; display: none; }
+    a { color: inherit; text-decoration: none; }
+    #content { position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; padding: 5px; border: 5px solid lime; background-color: white; text-align: center; }
+    @media screen and (min-width: 600px) {
+      #content { width: 600px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <div style="width: 80%; margin: 0 auto 10px auto; background-color: lime; color: white; font-size: 30px; box-shadow: 0 5px 0 lightgrey; padding: 5px; border-radius: 10px;"><a href="index.html"> Home&nbsp;Page </a></div>
+    <div style="font-size: 20px; background-color: lime; color: white; text-align: center; padding: 5px;"> 404 Not Found </div>
+    <div style="border: 5px solid lime; border-top: none; padding: 5px;"> Sorry! The page you are looking for does not exist. Hey, don't worry. I have got an awesome game for you. Let's Play!!! </div>
+    <div style="border: 5px solid lime; margin-top: 5px; padding: 5px 0;">
+      My guess is...<br/>
+      <button id="startBtn"> ? </button><button id="guessBtn" disabled></button>
+    </div>
+    <div style="border: 5px solid lime; border-top: none; padding: 5px;">
+      <p id="instructions"> Think of a number between 1 and 100 and click the above button. I will guess your number within 10 shots I promise. </p>
+      <button id="yesBtn"> Yes </button> <button id="noBtn"> No </button>
+      <button id="higherBtn"> Higher </button> <button id="lowerBtn"> Lower </button>
+    </div>
+    <div style="margin: 10px 5px; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5); display: none;" id="moreArea">
+      <div style="background-color: lime; color: white; font-size: 20px; padding: 5px 0;"> Did you liked my tricks? </div>
+      <p style="padding: 5px;"><a href="index.html"> Cool! Click here to see more awesome content of my website. </a></p>
+    </div>
+  </div>
+  <script>
+let max = 100;
+let min = 1;
+let nGuesses = 0;
+let currGuess = 0;
+const yesBtn = document.querySelector("#yesBtn");
+const noBtn = document.querySelector("#noBtn");
+const higherBtn = document.querySelector("#higherBtn");
+const lowerBtn = document.querySelector("#lowerBtn");
+const startBtn = document.querySelector("#startBtn");
+const guessBtn = document.querySelector("#guessBtn");
+const instructions = document.querySelector("#instructions");
+const moreArea = document.querySelector("#moreArea");
+
+startBtn.addEventListener("click", tryGuess);
+yesBtn.addEventListener("click", () => isGuessCorrect(true));
+noBtn.addEventListener("click", () => isGuessCorrect(false));
+higherBtn.addEventListener("click", () => numIsHigher(true));
+lowerBtn.addEventListener("click", () => numIsHigher(false));
+
+toggleBtns([startBtn], true);
+
+function tryGuess(){ 
+    if (!nGuesses) {
+        toggleBtns([startBtn], false);
+        toggleBtns([guessBtn], true);
+    }
+    nGuesses++;    
+    currGuess = Math.floor((max - min)/2) + min;
+    console.log(`Guessing between ${min} and ${max} - guessing ${currGuess} - this is guess number ${nGuesses}`);
+    guessBtn.textContent = currGuess + "!";
+    instructions.textContent = "Am I correct?";
+    toggleBtns([yesBtn, noBtn], true);
+}
+
+function toggleBtns(btnsArray, on) { 
+    for (let btn = 0; btn < btnsArray.length; btn++) {
+        if (on) {
+            btnsArray[btn].style.display = "inline-block"; 
+        } else {
+            btnsArray[btn].style.display = "none";
+        }
+    }
+}
+
+function isGuessCorrect(correct) {
+    toggleBtns([yesBtn, noBtn], false);
+    if (correct) {
+        instructions.textContent = `I guessed your number in ${nGuesses} tries!`;
+        moreArea.style.display = "block";
+    } else {
+        toggleBtns([higherBtn, lowerBtn], true);
+        instructions.textContent = `Is your number higher or lower than ${currGuess}?`;   
+    }
+} 
+  
+function numIsHigher(higher) {
+    if (higher) {
+        min = currGuess + 1;
+    } else {
+        max = currGuess - 1;
+    }
+    toggleBtns([higherBtn, lowerBtn], false);
+    tryGuess();
+}
+  </script>
+</body>
+</html>
