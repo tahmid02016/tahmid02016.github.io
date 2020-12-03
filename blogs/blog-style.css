@@ -1,3 +1,8 @@
+:root {
+  --brand: #0d2d3d;
+  --co-brand: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +13,7 @@ html, body {
 }
 
 a {
-  text-decoration: underline lime;
+  text-decoration: underline var(--brand);
   color: inherit;
 }
 
@@ -17,7 +22,7 @@ main {
 }
 
 #banner {
-  background-color: lime;
+  background: linear-gradient(to bottom right, var(--brand), var(--co-brand));
   font-size: 30px;
   font-weight: bold;
   padding-left: 30px;
@@ -46,7 +51,7 @@ main {
 }
 
 #blog-link a {
-  color: lime;
+  color: var(--brand);
 }
 
 footer {
@@ -64,8 +69,8 @@ p {
 }
 
 #my-speech {
-  color: lime;
-  background-color: #696969;
+  color: black;
+  background: linear-gradient(to bottom right, var(--brand), var(--co-brand)); // #696969;
 }
 
 #my-speech p {

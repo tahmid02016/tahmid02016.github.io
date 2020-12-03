@@ -6,11 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <title> 404 Not Found </title>
   <style>
+    :root {
+      --brand: #0f2d3d;
+      --co-brand: #ffffff;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: #1f3d5d; }
-    button { width: 40%; margin: 5px; padding: 5px; background-color: lime; color: white; border: none; outline; none; box-shadow: 0 5px 0 lightgrey; border-radius: 10px; font-size: 30; display: none; }
+    button { width: 40%; margin: 5px; padding: 5px; background: linear-gradient(to bottom right, var(--brand), var(--co-brand)); color: white; border: none; outline; none; box-shadow: 0 5px 0 lightgrey; border-radius: 10px; font-size: 30; display: none; }
     a { color: inherit; text-decoration: none; }
-    #content { position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; padding: 5px; border: 5px solid lime; background-color: white; text-align: center; }
+    #content { position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%; padding: 5px; border: 5px solid var(--brand); background-color: white; text-align: center; }
     @media screen and (min-width: 600px) {
       #content { width: 600px; }
     }
@@ -18,20 +22,20 @@
 </head>
 <body>
   <div id="content">
-    <div style="width: 80%; margin: 0 auto 10px auto; background-color: lime; color: white; font-size: 30px; box-shadow: 0 5px 0 lightgrey; padding: 5px; border-radius: 10px;"><a href="index.html"> Home&nbsp;Page </a></div>
-    <div style="font-size: 20px; background-color: lime; color: white; text-align: center; padding: 5px;"> 404 Not Found </div>
-    <div style="border: 5px solid lime; border-top: none; padding: 5px;"> Sorry! The page you are looking for does not exist. Hey, don't worry. I have got an awesome game for you. Let's Play!!! </div>
-    <div style="border: 5px solid lime; margin-top: 5px; padding: 5px 0;">
+    <div style="width: 80%; margin: 0 auto 10px auto; background: linear-gradient(to bottom right, var(--brand), var(--co-brand)); color: white; font-size: 30px; box-shadow: 0 5px 0 lightgrey; padding: 5px; border-radius: 10px;"><a href="index.html"> Home&nbsp;Page </a></div>
+    <div style="font-size: 20px; background: linear-gradient(to bottom right, var(--brand), var(--co-brand)); color: white; text-align: center; padding: 5px;"> 404 Not Found </div>
+    <div style="border: 5px solid var(--brand); border-top: none; padding: 5px;"> Sorry! The page you are looking for does not exist. Hey, don't worry. I have got an awesome game for you. Let's Play!!! </div>
+    <div style="border: 5px solid var(--brand); margin-top: 5px; padding: 5px 0;">
       My guess is...<br/>
       <button id="startBtn"> ? </button><button id="guessBtn" disabled></button>
     </div>
-    <div style="border: 5px solid lime; border-top: none; padding: 5px;">
+    <div style="border: 5px solid var(--brand); border-top: none; padding: 5px;">
       <p id="instructions"> Think of a number between 1 and 100 and click the above button. I will guess your number within 10 shots I promise. </p>
       <button id="yesBtn"> Yes </button> <button id="noBtn"> No </button>
       <button id="higherBtn"> Higher </button> <button id="lowerBtn"> Lower </button>
     </div>
     <div style="margin: 10px 5px; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5); display: none;" id="moreArea">
-      <div style="background-color: lime; color: white; font-size: 20px; padding: 5px 0;"> Did you liked my tricks? </div>
+      <div style="background: linear-gradient(to bottom right, var(--brand), var(--co-brand)); color: white; font-size: 20px; padding: 5px 0;"> Did you liked my tricks? </div>
       <p style="padding: 5px;"><a href="index.html"> Cool! Click here to see more awesome content of my website. </a></p>
     </div>
   </div>

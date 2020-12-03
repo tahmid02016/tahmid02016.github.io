@@ -9,14 +9,18 @@
   <link rel="stylesheet" href="style.css">
   <title> Tic Tac Toe </title>
   <style>
+  :root {
+    --brand: #0f2d3d;
+    --co-brand: #fff;
+  }
   * { box-align: border-box; overflow: auto; }
   html { margin: 0; padding: 0; }
-  body { margin: 0; padding: 0; border: 15px double lime; }
-  #banner { width: 80%; height: 60px; line-height: 60px; text-align: center; font-size: 40px; font-weight: bold; margin: 0 auto; margin-top: 30px; background-color: lime; color: white; }
-  #result-board { width: 80%; vheight: 50px; line-height: 50px; text-align: center; font-size: 30px; font-weight: bold; margin: 10px auto; background-color: lime; color: white; }
-  table { width: 80%; margin: 0 auto; border: 5px solid lime; border-collapse: collapse; }
-  td { width: 20vw; height: 20vw; border: 5px solid lime; text-align: center; verticle-align: center; font-size: 30px; font-weight: bold; color: lime; }
-  #restart { width: 80%; height: 50px; line-height: 50px; text-align: center; font-size: 30px; font-weight: bold; margin: 10px auto; background-color: lime; color: white; }
+  body { margin: 0; padding: 0; border: 15px double var(--brand); }
+  #banner { width: 80%; height: 60px; line-height: 60px; text-align: center; font-size: 40px; font-weight: bold; margin: 0 auto; margin-top: 30px; background: linear-gradient(to bottom right, var(--brand), var(--co-brand)); color: white; }
+  #result-board { width: 80%; vheight: 50px; line-height: 50px; text-align: center; font-size: 30px; font-weight: bold; margin: 10px auto; background: linear-gradient(to bottom right,  var(--brand), var(--co-brand)); color: white; }
+  table { width: 80%; margin: 0 auto; border: 5px solid var(--brand); border-collapse: collapse; }
+  td { width: 20vw; height: 20vw; border: 5px solid var(--brand); text-align: center; verticle-align: center; font-size: 30px; font-weight: bold; color: var(--brand); }
+  #restart { width: 80%; height: 50px; line-height: 50px; text-align: center; font-size: 30px; font-weight: bold; margin: 10px auto; background: linear-gradient(to bottom right, var(--brand), var(--co-brand)); color: white; }
   </style>
 </head>
 
