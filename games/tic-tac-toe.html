@@ -35,7 +35,9 @@
   <div id="restart" onclick="restartGame()"> Restart Game </button>
   <script>
   var board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
+  var boardCondition = [false, false, false, false, false, false, false, false, false];
   var player = "X";
+  var finished = false;
   function printBoard() {
     document.getElementById("result-board").innerHTML = `Player - ${player}`;
     document.getElementById("AA"). innerHTML = board[0];
@@ -49,10 +51,17 @@
     document.getElementById("CC"). innerHTML = board[8];
   }
   function playTurn(n) {
+    if (finished) {
+      return;
+    } else if(boardCondition[n]) {
+    return;
+    }
     board[n] = player;
+    boardCondition[n] = true;
     if (isWinner()) {
         printBoard();
         document.getElementById("result-board").innerHTML = `Player ${player} Won!`;
+        finished = true;
         disableClick();
     } else if(isDraw()) {
         printBoard();
@@ -76,7 +85,9 @@
   }
   function restartGame() {
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
+    boardCondition = [false, false, false, false, false, false, false, false, false];
     player = "X";
+    finished = false;
     printBoard();
   }
   </script>
