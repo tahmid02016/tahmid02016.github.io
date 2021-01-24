@@ -7,9 +7,18 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Kalpurush;
+  src: url(../Kalpurush.ttf);
+}
+
 html, body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: Kalpurush;
 }
 
 a {
