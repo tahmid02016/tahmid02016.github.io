@@ -130,3 +130,8 @@ section {
     width: 100%;
   }
 }
+
+@media (min-width: 800px) {
+  header {
+    min-height: 300px;
+}
