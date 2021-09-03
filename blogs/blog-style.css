@@ -28,6 +28,9 @@ a {
 
 main {
   font-size: 18px;
+}
+
+main p {
   text-align: justify;
 }
 
