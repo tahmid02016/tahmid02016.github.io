@@ -1,93 +1,67 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="All bloges written by Md. Tahmid Hossain.">
+  <meta name="description" content="আমার লেখা সকল ব্লগের তালিকা। ১.ওপেন সোর্স ইন্টেলিজেন্স ২.এনকোডিং বনাম এনক্রিপশন বনাম হ্যাশিং...">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Tahmid02016 Blog </title>
+  <title> তাহমিদের ব্লগ </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> 
   <style>
-    :root {
-      --brand: #0f2d3d;
-      --co-brand: #ffffff;
-    }
-    * {box-sizing: border-box;}
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-    a {text-decoration: none; color: inherit; }
-    #banner {
-        background: linear-gradient(to bottom right, var(--brand), var(--co-brand));
-        color: white;
-        font-size: 30px;
-        font-weight: bold;
-        width: 100%;
-        height: 60px;
-        line-height: 60px;
-        padding-left: 30px;
-        position: fixed;
-        top: 0;
-      }
-      .blog-container {
-        width: 90%;
-        margin: 20px auto;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-      }
-      .blog-container:first-child {margin-top: 100px;}
-      .blog-title {
-        background: linear-gradient(to bottom right, var(--brand), var(--co-brand));
-        font-size: 20px;
-        font-weight: bold;
-        padding: 10px;
-      }
-      .blog-title a {color: white;}
-      .blog-content {margin: 10px;}
-      .blog-link {
-        text-align: right;
-        padding: 0 20px 20px 0;
-        font-weight: bold;
-        font-size: 20px;
-      }
-      .blog-link a {color: var(--brand);}
-      #footer-link {
-        text-align: center;
-        padding: 10px;
-        background-color: black;
-        color: white;
-      }
+    @font-face { font-family: Kalpurush; src:url("fonts/Kalpurush.ttf"); }
+    body { margin:0; background-color:#121212; color:rgba(255,255,255,0.87); font-family:Kalpurush; }
+    a { color:inherit; text-decoration:none; }
+    .navbar { background-color:black; }
+    .navbar-brand { font-size: 2rem; }
+    .card { color:inherit; width:100%; height:100%; }
+    .card-title { font-size: 1.5rem; display:block; border-bottom:1px solid white; }
+    .card-link { font-size: 1.2rem; text-align:right; margin-top:1rem; display:block;}
+    footer { background-color:black; text-align:center; padding:1rem; }
   </style>
 </head>
 
 <body>
-  <header>
-    <div id="banner"><a href="../index.html"> Tahmid02016 </a></div>
+  <header class="mb-4">
+    <nav class="navbar sticky-top navbar-dark">
+      <div class="container">
+        <a href="../index.html" class="navbar-brand"> তাহমিদের ব্লগ </a>
+      </div>
+    </nav>
   </header>
-  <main>
-    <div class="blog-container">
-      <div class="blog-title"><a href="open-source-intelligence-1.html"> ওপেন সোর্স ইন্টেলিজেন্স ১ </a></div>
-      <div class="blog-content">
-        <p> ওপেন সোর্স ইন্টেলিজেন্স (Open Source Intelligence - OSINT) বলতে কোনো উদ্দেশ্যে বিভিন্ন উন্মুক্ত উৎস যেমন- সংবাদপত্র, টেলিভিশন, ওয়েবসাইট, সামাজিক যোগাযোগ মাধ্যম ইত্যাদি থেকে উপাত্ত সংগ্রহ ও বিশ্লেষণকে বোঝায়। বর্তমানে সরকার, ব্যবসা প্রতিষ্ঠান, সাইবার নিরাপত্তা কর্মী ও পেনটেস্টারসহ আরও অনেক ব্যক্তি ও প্রতিষ্ঠান ওপেন সোর্স ইন্টেলিজেন্স বা ওসিন্ট ব্যবহার করছে। দিন দিন যেভাবে তথ্যের পরিমাণ বৃদ্ধি পাচ্ছে, সেভাবেই ওসিন্ট-এর ব্যবহারও বৃদ্ধি পাচ্ছে। [...] </p>
-      </div>
-      <div class="blog-link"><a href="open-source-intelligence-1.html"> পুরো ব্লগটি পড়ুন </a></div>
-    </div>
-    <div class="blog-container">
-      <div class="blog-title"><a href="encoding-encryption-hashing.html"> এনকোডিং বনাম এনক্রিপশন বনাম হ্যাশিং </a></div>
-      <div class="blog-content">
-        <p> এনকোডিং, এনক্রিপশন এবং হ্যাশিং বিষয় তিনটি নিয়ে অনেক সময় ধাঁধায় পড়ে যেতে হয়। এদের দেখে মনে হয় এরা একই কাজ করে, কিন্তু প্রকৃতপক্ষে এদের মাঝে পার্থক্য বিদ্যমান। চলুন একে একে দেখে নেয়া যাক কোনটি কী কাজ করে। [...] </p>
-      </div>
-      <div class="blog-link"><a href="encoding-encryption-hashing.html"> পুরো ব্লগটি পড়ুন </a></div>
-    </div>
-    <div class="blog-container">
-      <div class="blog-title"><a href="why-privacy-matters.html"> কেন গোপনীয়তা প্রয়োজনীয় </a></div>
-      <div class="blog-content">
-        <p> গোপনীয়তার প্রয়োজনীয়তা নিয়ে অধিকাংশ মানুষের মাঝেই অবহেলা রয়েছে। অধিকাংশ লোক এই বিষয়টায় কোনো গুরুত্বই দেয় না। তারা মনে করে তারা কোনো খারাপ কাজ করে না, তাই তাদের কিছু লুকানোর নেই। কিন্তু এই বিষয়টি মোটেও এত সহজ নয়। বিভিন্ন সরকারি সংস্থা আমাদের উপরে নজরদারি করছে। তারা অপরাধ দমনের জন্য হয়তো আমাদের উপরে নজরদারি করছে। আপনি হয়তো অপরাধী নন তাই সরকারের কাছে থেকে নিজেকে লুকাতে চাইবেন না। কিন্তু আরও অনেক সংস্থা/ব্যক্তি রয়েছে যারা আপনার উপরে নজরদারি করতে পারে এবং তারা আপনার ক্ষতি করতে পারে। [...] </p>
-      </div>
-      <div class="blog-link"><a href="why-privacy-matters.html"> পুরো ব্লগটি পড়ুন </a></div>
-    </div> 
+  <main class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-3">
+        <div class="card bg-dark">
+          <div class="card-body">
+            <a href="open-source-intelligence-1.html" class="card-title"> ওপেন সোর্স ইন্টেলিজেন্স ১ </a>
+            <p class="card-text">ওপেন সোর্স ইন্টেলিজেন্স (Open Source Intelligence - OSINT) বলতে কোনো উদ্দেশ্যে বিভিন্ন উন্মুক্ত উৎস যেমন- সংবাদপত্র, টেলিভিশন, ওয়েবসাইট, সামাজিক যোগাযোগ মাধ্যম ইত্যাদি থেকে উপাত্ত সংগ্রহ ও বিশ্লেষণকে বোঝায়। বর্তমানে সরকার, ব্যবসা প্রতিষ্ঠান, সাইবার নিরাপত্তা কর্মী ও পেনটেস্টারসহ আরও অনেক ব্যক্তি ও প্রতিষ্ঠান ওপেন সোর্স ইন্টেলিজেন্স বা ওসিন্ট ব্যবহার করছে। দিন দিন যেভাবে তথ্যের পরিমাণ বৃদ্ধি পাচ্ছে, সেভাবেই ওসিন্ট-এর ব্যবহারও বৃদ্ধি পাচ্ছে। [...]</p>
+            <a href="open-source-intelligence-1.html" class="card-link"> পুরো ব্লগটি পড়ুন </a>
+          </div> <!-- close card-body -->
+        </div> <!-- close card -->
+      </div> <!-- close col -->
+      <div class="col-lg-3 col-md-6 mb-3">
+        <div class="card bg-dark">
+          <div class="card-body">
+            <a href="encoding-encryption-hashing.html" class="card-title">এনকোডিং বনাম এনক্রিপশন বনাম হ্যাশিং</a>
+            <p class="card-text">এনকোডিং, এনক্রিপশন এবং হ্যাশিং বিষয় তিনটি নিয়ে অনেক সময় ধাঁধায় পড়ে যেতে হয়। এদের দেখে মনে হয় এরা একই কাজ করে, কিন্তু প্রকৃতপক্ষে এদের মাঝে পার্থক্য বিদ্যমান। চলুন একে একে দেখে নেয়া যাক কোনটি কী কাজ করে। [...] </p>
+            <a href="encoding-encryption-hashing.html" class="card-link">পুরো ব্লগটি পড়ুন</a>
+          </div> <!-- close card-body -->
+        </div> <!-- close card -->
+      </div> <!-- close col -->
+      <div class="col-lg-3 col-md-6 mb-3">
+        <div class="card bg-dark">
+          <div class="card-body">
+            <a href="why-privacy-matters.html" class="card-title">কেন গোপনীয়তা প্রয়োজনীয়</a>
+            <p class="card-text">গোপনীয়তার প্রয়োজনীয়তা নিয়ে অধিকাংশ মানুষের মাঝেই অবহেলা রয়েছে। অধিকাংশ লোক এই বিষয়টায় কোনো গুরুত্বই দেয় না। তারা মনে করে তারা কোনো খারাপ কাজ করে না, তাই তাদের কিছু লুকানোর নেই। কিন্তু এই বিষয়টি মোটেও এত সহজ নয়। বিভিন্ন সরকারি সংস্থা আমাদের উপরে নজরদারি করছে। তারা অপরাধ দমনের জন্য হয়তো আমাদের উপরে নজরদারি করছে। আপনি হয়তো অপরাধী নন তাই সরকারের কাছে থেকে নিজেকে লুকাতে চাইবেন না। কিন্তু আরও অনেক সংস্থা/ব্যক্তি রয়েছে যারা আপনার উপরে নজরদারি করতে পারে এবং তারা আপনার ক্ষতি করতে পারে। [...] </p>
+            <a href="why-privacy-matters.html" class="card-link">পুরো ব্লগটি পড়ুন</a>
+          </div> <!-- close card-body -->
+        </div> <!-- close card -->
+      </div> <!-- close col -->
+    </div>  <!-- close row -->
   </main>
   <footer> 
     <div id="footer-link"> tahmid02016.github.io </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
