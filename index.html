@@ -1,127 +1,347 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="google-site-verification" content="_i5B3Uerp0Su4hAHc3yvIrZA2gKRQHANr-1uMDsd54I"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="keyword" content="tahmid02016, Md. Tahmid Hossain"/>
-  <meta name="description" content="Hello World. My name is Md. Tahmid Hossain but you can call me Tahmid. I am a programmer, developer, info-sec practitioner and digital marketer."/>
-  <title> Md. Tahmid Hossain </title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <style>
-    body { margin:0; padding:0; font-family:serif; background-color:#e7edf3; }
-    a { color:inherit; text-decoration: none; }
-    header { background-color:white; font-size:2rem; padding:2rem 0; border: 0.5rem solid #c0d0e0; }
-    footer { background-color:#b3c6d9; padding: 1rem; text-align: center; }
-    section + section { margin-top: 1.5rem; }
-    .see-more-link { background-color: white; font-size: 2rem; padding: 1.5rem 0; text-align:center; width:100%; height:100%; display:block; border:0.5rem solid #c0d0e0; }
-    @media(min-width:800px) {
-      header { padding-top:50px; padding-bottom:50px; }
-    }
-    @media(min-width:1000px) {
-      header { padding-top:100px; padding-bottom:100px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Tahmid Hossain</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col">
 
-<body>
-  <header class="mb-4"><div class="container text-center">Hello World. My name is Md. Tahmid Hossain but you can call me Tahmid. I am a programmer, developer, info-sec practitioner and digital marketer.</div></header>
-  
-  <main>
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-2 my-4">
-        <div class="col mb-3"><a href="blogs/blogs.html" class="see-more-link"> Read My Blogs </a></div>
-      <div class="col mb-3"><a href="games/games.html" class="see-more-link"> Play Games </a></div>
-      </div> <!-- close row -->
-    </div> <!-- close container -->
-    <section class="container">
-      <h1 class="border-bottom border-secondary"> About Me </h1>
-      <p> Hello World. My name is Md. Tahmid Hossain but you can call me Tahmid. I am a programmer, developer, info-sec practitioner and digital marketer. <br/></br>
-      Actually, I am obsessed with coding. And most of my time I spend solving programming problems and building digital products. I am also a lot fascinated about information security (info-sec). In fact, I think I will build my career in this field. <br/></br>
-      I am always hungry for making myself my better version. I am a curious minded person and I have a great hunger for excellence. I am a fast learner and able to pick up new skills quickly. I can adopt to changes and handle unexpected obstacles easily. <br/><br/>
-      You can read my blogs to know more about me and what I like :) </p>
-      </section>
-      
-      <section class="container">
-      <h1 class="border-bottom border-secondary"> My Skills </h1>
-      <div class="row">
-        <h3> Technical Skills </h3> 
-        <div class="col">
-          <ul>
-            <li> C/ C++ </li>
-            <li> Python </li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li> HTML </li>
-            <li> CSS </li>
-          </ul>
-        </div>
-      <h3> Soft Skills </h3>
-        <div>
-          <ul>
-            <li> Efficient and effective communication skills. </li>
-            <li> Self-organized and able to work independently. </li>
-            <li> Passion and hunger for excellence. </li>
-            <li> Always curious and courageous. </li>
-            <li> Open to receive clear and useful critism. </li>
-          </ul>
-        </div>
-      </section>
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-white/70 dark:bg-slate-900/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-brand-600 dark:text-brand-500">
+                TH.
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500 transition-colors">About</a>
+                <a href="#education" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Education</a>
+                <a href="#wikipedia" class="text-sm font-medium hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Wikimedia Portfolio</a>
+            </nav>
 
-      <section class="container my-achievement">
-      <h1 class="border-bottom border-secondary"> My Achievements </h1>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 pb-3">
-          <div class="card h-100">
-          <img src="images/hackerrank-c-basic.png" class="card-img-top"/>
-          <div class="card-body border-top">
-            <p class="card-text"> Hackerrank C (Basic) Certificate </p>
-          </div>
-          </div> <!-- close card -->
-        </div>
-        <div class="col-lg-3 col-md-6 pb-3">
-          <div class="card h-100">
-          <img src="images/googleDigitalMarketing.png" class="card-img-top"/>
-          <div class="card-body border-top">
-            <p class="card-text"> Fundamentals of Digital Marketing Certificate provided by Google Digital Garage </p>
-          </div>
-          </div> <!-- close card -->
-        </div>
-        <div class="col-lg-3 col-md-6 pb-3">
-          <div class="card h-100">
-          <img src="images/freeCodeCampPython.png" class="card-img-top"/>
-          <div class="card-body border-top">
-            <p class="img-caption"> Scientific Computing with Python certificate provided by freeCodeCamp </p>
-          </div>
-          </div> <!-- close card -->
-        </div>
-        <div class="col-lg-3 col-md-6 pb-3">
-          <div class="card h-100">
-          <img src="images/freeCodeCampWebDesign.png" class="card-img-top"/>
-          <div class="card-body border-top">
-            <p class="img-caption"> Responsive Web Desing Certificate provided by freeCodeCamp </p>
-          </div>
-           </div> <!-- close card -->
-        </div>
-      </div>
-      </section>
+            <div class="flex items-center space-x-4">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:ring-2 hover:ring-slate-300 dark:hover:ring-slate-700 transition-all" aria-label="Toggle Theme">
+                    <i data-lucide="sun" id="sun-icon" class="hidden h-5 w-5"></i>
+                    <i data-lucide="moon" id="moon-icon" class="h-5 w-5"></i>
+                </button>
 
-      <section class="container">
-      <h1 class="border-bottom border-secondary"> Contact Me </h1>
-      <p> If you think we can be friends or I can help you, feel free to knock me. I am waiting to hear you. </p>
-      <ul>
-        <li> Email: <a href="mailto:t4hm1d02016@gmail.com" class="border-bottom border-secondary"> t4hm1d02016@gmail.com </a></li>
-        <li> Facebook: <a href="https://facebook.com/t4hm1d02016" class="border-bottom border-secondary"> facebook.com/t4hm1d02016 </a></li><br/>
-        <h3>My other profiles:</h3>
-        <li> Hackerrank: <a href="https://hackerrank.com/t4hm1d02016" class="border-bottom border-secondary"> hackerrank.com/t4hm1d02016 </a></li>
-        <li> Github: <a href="https://github.com/tahmid02016" class="border-bottom border-secondary"> github.com/tahmid02016 </a></li>
-      </ul>
-    </section>
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="md:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" aria-label="Toggle Menu">
+                    <i data-lucide="menu" id="menu-icon" class="h-5 w-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4 space-y-3">
+            <a href="#about" class="block text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+            <a href="#education" class="block text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Education</a>
+            <a href="#wikipedia" class="block text-base font-medium px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">Wikimedia Portfolio</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="hero" class="relative py-20 lg:py-32 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-600 dark:bg-brand-900/30 dark:text-brand-500 border border-brand-100 dark:border-brand-900/50">
+                            Welcome to my virtual space
+                        </span>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600 dark:from-brand-400 dark:to-indigo-400">Md. Tahmid Hossain</span>
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                            I am a Bachelor of Business Administration (BBA) student in the Department of Finance at the University of Rajshahi. Alongside my academic focus, I am a highly active contributor, community coordinator, and open preservation advocate within the global Wikimedia movement.
+                        </p>
+                        <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                            <a href="#education" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 active:bg-brand-800 shadow-lg shadow-brand-600/20 transition-all">
+                                Academic History <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                            </a>
+                            <a href="#wikipedia" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                                Wikimedia Journey <i data-lucide="globe" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Photograph Frame & Decorative Graphic Card -->
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center">
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 group">
+                            <!-- Background glow aura -->
+                            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-500 to-indigo-500 opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
+                            
+                            <!-- Main Photograph Container -->
+                            <div class="relative w-full h-full rounded-full border-4 border-white dark:border-slate-800 bg-slate-100 dark:bg-slate-950 overflow-hidden shadow-2xl flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-300">
+                                
+                                <!--Profile photo section-->
+                                <img id="profile-image" src="tahmid_profile.jpg" alt="Md. Tahmid Hossain" class="w-full h-full object-cover" onerror="this.classList.add('hidden'); document.getElementById('photo-placeholder').classList.remove('hidden');">
+                                
+                                <!-- Fallback Placeholder (Appears automatically if the profile image is missing or fails to load) -->
+                                <div id="photo-placeholder" class="hidden flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 p-8 text-center">
+                                    <div class="p-4 bg-slate-200/50 dark:bg-slate-900 rounded-full mb-3">
+                                        <i data-lucide="user" class="w-12 h-12 text-slate-500 dark:text-slate-400"></i>
+                                    </div>
+                                    <p class="text-xs font-semibold tracking-wide uppercase">Md. Tahmid Hossain</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Status Badge below Photograph -->
+                        <div class="mt-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm text-xs text-slate-500 dark:text-slate-400">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            BBA in Finance &bull; Rajshahi University
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Background grids -->
+            <div class="absolute top-1/2 left-0 right-0 -translate-y-1/2 -z-10 opacity-30 dark:opacity-10 pointer-events-none">
+                <div class="h-[500px] w-full bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-white dark:bg-slate-950 transition-colors">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">About Me</h2>
+                    <div class="mt-2 h-1 w-12 bg-brand-500 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                    <p>
+                        Currently pursuing a Bachelor of Business Administration (BBA) at the Department of Finance, University of Rajshahi, my academic life centers on mastering financial analytics, business strategies, and investment models. This education grounds me in analytical and logical frameworks that help interpret complex industrial and financial environments, laying a robust analytical foundation for both corporate endeavors and structural knowledge work.
+                    </p>
+                    <p>
+                        Beyond my studies, I am deeply devoted to collaborative open-source wisdom and digital archive curation. Since 2017, I have been actively contributing to global Wikimedia projects, editing, documenting, and archiving crucial cultural and educational narratives. My devotion to free knowledge guides me to actively coordinate outreach programs, initiate open-source collaborations, and inspire a rising generation of volunteers to join and enrich the global knowledge commons.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Education</h2>
+                    <div class="mt-2 h-1 w-12 bg-brand-500 mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Academic Timeline -->
+                <div class="relative border-l border-slate-200 dark:border-slate-800 ml-4 md:ml-8 space-y-12">
+                    
+                    <!-- University of Rajshahi Card -->
+                    <div class="relative pl-8 sm:pl-10">
+                        <!-- Dot -->
+                        <div class="absolute -left-3.5 top-1.5 bg-brand-600 dark:bg-brand-500 rounded-full w-7 h-7 flex items-center justify-center text-white ring-4 ring-slate-50 dark:ring-slate-900">
+                            <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                        </div>
+                        <div class="bg-white dark:bg-slate-950 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 hover:border-brand-500/30 dark:hover:border-brand-500/30 shadow-sm transition-all">
+                            <span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 dark:bg-brand-900/20 text-brand-600 dark:text-brand-400 mb-3">
+                                Undergraduate Program
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bachelor of Business Administration (BBA) in Finance</h3>
+                            <p class="text-slate-600 dark:text-slate-400 font-medium">Department of Finance, University of Rajshahi</p>
+                            <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-relaxed text-justify">
+                                My current academic pursuit is focused on corporate finance, investment planning, and econometric modeling. Through this rigorous BBA program, I analyze asset pricing, study market structures, and apply corporate valuation tools to understand real-world business dynamics. The academic atmosphere at Rajshahi University sharpens my structural analysis and strategic planning skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Shah Makhdum College Card -->
+                    <div class="relative pl-8 sm:pl-10">
+                        <!-- Dot -->
+                        <div class="absolute -left-3.5 top-1.5 bg-indigo-600 dark:bg-indigo-500 rounded-full w-7 h-7 flex items-center justify-center text-white ring-4 ring-slate-50 dark:ring-slate-900">
+                            <i data-lucide="book-open" class="w-4 h-4"></i>
+                        </div>
+                        <div class="bg-white dark:bg-slate-950 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800/50 hover:border-brand-500/30 dark:hover:border-brand-500/30 shadow-sm transition-all">
+                            <span class="inline-flex items-center text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 mb-3">
+                                Higher Secondary Education
+                            </span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Higher Secondary Certificate (HSC) in Science</h3>
+                            <p class="text-slate-600 dark:text-slate-400 font-medium">Shah Makhdum College, Rajshahi</p>
+                            <p class="mt-2 text-brand-600 dark:text-brand-400 text-sm font-semibold">
+                                Result: GPA 5.00 out of 5.00
+                            </p>
+                            <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-relaxed text-justify">
+                                Completed my higher secondary education in the Science group at Shah Makhdum College in Rajshahi, graduating with a perfect grade point average. This scientific and analytical background nurtured my mathematical foundational skills and critical scientific curiosity, preparing me well for the structured quantitative challenges encountered in my business degree.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Wikipedia Contribution Section -->
+        <section id="wikipedia" class="py-20 bg-white dark:bg-slate-950 transition-colors">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white sm:text-4xl">Wikipedia & Open Source Roles</h2>
+                    <div class="mt-2 h-1 w-12 bg-brand-500 mx-auto rounded-full"></div>
+                    <p class="mt-4 text-slate-600 dark:text-slate-400">
+                        Since 2017, I have been actively dedicating my skills to community organization, cultural digital preservation, and editor coordination.
+                    </p>
+                </div>
+
+                <!-- Three Key Positions -->
+                <div class="grid grid-cols-1 gap-8 mb-16">
+                    
+                    <!-- Role 1: Volunteer of Wikimedia Movement -->
+                    <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/50 dark:border-slate-800/50 shadow-sm flex flex-col md:flex-row gap-6 items-start transition-all">
+                        <div class="p-4 bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 rounded-2xl w-fit shrink-0">
+                            <i data-lucide="globe" class="w-8 h-8"></i>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Volunteer of the Wikimedia Movement</h3>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                                As a highly active volunteer across global Wikimedia projects, I have made more than 3.4 million edits across several open platforms. This contribution represents a persistent dedication to local history, linguistic representation, and broad-ranging general documentation, keeping free educational resources up to date for millions of global searchers.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Member of Wikimedia Bangladesh -->
+                    <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/50 dark:border-slate-800/50 shadow-sm flex flex-col md:flex-row gap-6 items-start transition-all">
+                        <div class="p-4 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 rounded-2xl w-fit shrink-0">
+                            <i data-lucide="heart" class="w-8 h-8"></i>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Member of Wikimedia Bangladesh</h3>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                                In my ongoing association with Wikimedia Bangladesh, I support the chapter’s active mission of creating deep awareness among the citizens of Bangladesh regarding the value and presence of open knowledge platforms. I work to show individuals how to effectively use open-source content, integrate reliable research tools, and securely navigate these platforms to enhance their academic and personal discovery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: Chief Coordinator of Rajshahi Wikimedia Community -->
+                    <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/50 dark:border-slate-800/50 shadow-sm flex flex-col md:flex-row gap-6 items-start transition-all">
+                        <div class="p-4 bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 rounded-2xl w-fit shrink-0">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Chief Coordinator of the Rajshahi Wikimedia Community</h3>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                                In my capacity as Chief Coordinator, I guide our regional team in arranging localized workshops, interactive educational seminars, regular study circles, and technical training programs. We design these activities in active partnerships and strategic cooperation with regional academic institutes, research teams, and interested organizations to systematically expand, share, and promote the use of free, open-source educational resources.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GLAM Narrative / Digital Scanning Initiative -->
+                <div class="bg-slate-50 dark:bg-slate-900 p-8 rounded-3xl border border-slate-200/50 dark:border-slate-800/50 shadow-sm">
+                    <div class="max-w-4xl mx-auto space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white text-center mb-4">GLAM Preservation & Digitization Initiatives</h3>
+                        <p>
+                            My practical dedication to open archival materials also extends to physical digitization projects. Under a formal contract with Wikimedia Bangladesh, I have worked directly on the preservation of historical out-of-print literature, scanning more than 25,000 pages of copyright-free books. This effort guarantees that critical regional publications are shielded from deterioration and remain permanently accessible to the world.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
-  <footer> tahmid02016.github.io </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200/50 dark:border-slate-800/50 py-12 transition-colors">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+                &copy; <span id="current-year"></span> Md. Tahmid Hossain. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Logic Controller script -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Theme Toggle Setup
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+
+        // Check for saved theme preference or default to system theme
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            }
+        });
+
+        // Mobile Menu Setup
+        const menuToggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuToggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            menuIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Dynamic Year Script
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
-</html>
+                      </html>
